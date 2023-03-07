@@ -1,0 +1,194 @@
+:root {
+    --main-color: #EE7459;
+    --main-text-color: rgb(7, 12, 16);
+    --secondary-text-color: rgb(87, 95, 103);
+    --bg-color: #F8F3EA;
+    --textArea-color: rgb(245, 242, 242);
+}
+
+@media screen and (-ms-high-contrast: active) {
+    :root {
+        --main-color: rgb(110, 34, 6);
+        --main-text-color: rgb(7, 12, 16);
+        --secondary-text-color: rgb(50, 58, 65);
+        --bg-color: rgb(255, 247, 240);
+        --textArea-color: rgb(255, 255, 255);
+    }
+  }
+
+@media (prefers-contrast: more) {
+    :root {
+        --main-color: rgb(110, 34, 6);
+        --main-text-color: rgb(7, 12, 16);
+        --secondary-text-color: rgb(50, 58, 65);
+        --bg-color: rgb(255, 247, 240);
+        --textArea-color: rgb(255, 255, 255);
+    }
+}
+
+
+
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 84vw;
+    margin-left: 8vw;
+    margin-top: 3vh;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+    font-size: 1.05rem;
+    line-height: 1.10rem;;
+    font-family: 'Finlandica','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body section {
+    margin-top: 7vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+body section > * {
+    flex: 48% 0 0;
+}
+
+form {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+form button {
+    background-color: var(--textArea-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0.1rem 0.1rem 0rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.example {
+   margin-top: 1em;
+}
+
+.example * {
+    color: var(--secondary-text-color);
+}
+
+.example .exLink {
+    text-decoration: underline;
+    color: var(--main-color);
+    font-style: italic;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+ul {
+    margin-left: 2vw;
+}
+
+ul li {
+    list-style:disc;
+    line-height: 1.3em;
+}
+
+ul li::marker {
+    color: var(--main-color);
+    font-size: 0.5em;
+}
+
+textarea {
+    margin-top: 1.5vh;
+    resize: vertical;
+    line-height: 1.5rem;
+    padding: 1vh 0.5vw;
+    font-size: 1.1rem;
+    background-color: var(--textArea-color);
+    color: var(--main-text-color);
+    align-self: stretch;
+}
+
+textarea::placeholder {
+    color: var(--main-text-color);
+    opacity: 0.5;
+    font-style: italic;
+}
+
+h1 {
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+h2, h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+section div:first-child > p {
+    margin-top: 0.8rem;
+    font-style: italic;
+    color: var(--secondary-text-color);
+}
+
+form button {
+    padding: 1vh 2vw;
+    margin-top: 1vh;
+}
+
+section > div:last-child > aside {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+section > div:last-child > aside > div {
+    margin-right: 2vw;
+}
+
+section > div:last-child > aside label {
+    margin-right: 0.5rem;
+}
+
+
+#separator {
+    width: 3em;
+    height: 1.05rem;
+}
+
+aside div {
+    margin-top: 1vh;
+}
+
+section small {
+    color: var(--secondary-text-color);
+}
+
+#result {
+    margin-top: 2vh;
+    height: 46vh;
+    overflow-y: scroll;
+    background-color: rgba(19, 19, 19, 0.023);
+    border: 2px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh 1vw;
+}
+
+#result p {
+    color: var(--main-text-color);
+    line-break: loose;
+    white-space:pre-line;
+    line-height: 1.4rem;
+}
+
+.temp {
+    opacity: 0.4;
+    font-style: italic;
+}

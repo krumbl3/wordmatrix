@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pour mobile -->
+    
+    <link rel="icon" href="favicon.ico" />  
+    <link rel="stylesheet" href="css/master.css">
+
+    <title> Word Matrix </title>
+    <meta name="description" content="Word Matrix - a small tool to generate all possible combinations from word lists "/>
+</head>
+<body>
+    <div id="wrapper">
+
+        <h1>Word Matrix</h1>
+        <p>A small <strong>tool</strong> to generate all possible <strong>combinations</strong> from <strong>word lists</strong>.</p>
+        
+
+        <section>
+            <div>
+                <h2>Word List</h2>
+                    <p>A word list per line, words are separated by commas "," or ";" or "."</p>
+                <form action="">
+                    <textarea aria-label="Word list zone" aria-required="true" aria-multiline="true" name="wordList" id="wordList" rows="15" placeholder="Blueberry, Honey, Peach&#10;Cake, Pie, Crumble"></textarea>
+                    <button aria-label="generate button" type="button" id="generate">Generate</button>
+                </form>
+                <aside class="example"> <p> Examples :  </p> 
+                    <ul>
+                    <li> Create <em>matrix</em> of <em>possibilities</em>. <span class="exLink" data-no="1">See example</span></li>
+                    <li> <em>Generate</em> <em>combinaisons</em> of syllabus or words for <em>naming</em>. <span class="exLink" data-no="2">See example</span></li>
+                    <li> Create <em>groups</em> of peoples. <span class="exLink" data-no="3">See example</span> </li>
+                    <li>  <em>Generate</em> <em>variation</em> of a math expression. <span class="exLink" data-no="4">See example</span></li>
+                    </ul>
+                </aside>
+            </div>
+            <div>
+                <h3>Generated combinaisons</h3>
+                <aside id="options">
+                    <div>
+                        <input id="concat" name="concat" type="checkbox"> 
+                        <label for="concat">Concatenate words </label><br>  
+                        <small>"sticks" the words together</small>
+                    </div> 
+                    <div>
+                        <label for="separator">Word separator :</label>  
+                        <input id="separator" name="separator" type="text" value=""> 
+                        <br>
+                        <small>space if not specified</small>  
+                    </div>
+                </aside>
+               
+                <div id="result" aria-label="Generated combos list" aria-relevant="text" aria-live="polite" aria>
+                    <p aria-label="Example generated list" class="temp">Blueberry Cake
+                        Blueberry Pie
+                        Blueberry Crumble
+                        Honey Cake
+                        Honey Pie
+                        Honey Crumble
+                        Peach Cake
+                        Peach Pie
+                        Peach Crumble</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,31 @@
+@media only screen and (max-aspect-ratio: 2.6/2) {
+    body section {
+        margin-top: 3vh;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+
+    
+    form {
+        margin-top: 0;
+    }
+
+    section > div:first-child > aside {
+        margin-top: 2vh;
+        margin-bottom: 4vh;
+    }
+
+    #result {
+        height: auto;
+        margin-bottom: 10vh;
+    }
+
+}
+
+
+@media only screen and (max-aspect-ratio: 2/3.1) {
+    section > div:last-child > aside {
+        flex-flow: column;
+    }
+
+}
